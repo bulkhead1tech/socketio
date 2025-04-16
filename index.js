@@ -38,7 +38,6 @@ io.emit("getrooms", rooms)
 
   
   socket.on("message", ({input, room, user})=>{
-    console.log(input)
     socket.to(room).emit("receive",{input, server:true, user})
 })
 
